@@ -1,4 +1,5 @@
 #pragma once
+#include "rendergles.hpp"
 
 class RenderGLES;
 

@@ -47,7 +47,9 @@ struct __drm_fb *RenderGLES::drmFBGetFromBO(struct gbm_bo *bo) {
 		return fb;
 	}
 	
-	fb = (__drm_fb*)calloc(1, sizeof *fb);
+	//fb = (__drm_fb*)calloc(1, sizeof *fb);
+	// we move to c++ for sctruct/class instantiation.
+	fb = new __drm_fb;
 	fb->bo = bo;
 
 	width = gbm_bo_get_width(bo);

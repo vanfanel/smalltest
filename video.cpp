@@ -9,7 +9,7 @@ Video video;
 
 Video::Video(void)
 {
-
+	renderer = NULL;
 }
 
 Video::~Video(void)
