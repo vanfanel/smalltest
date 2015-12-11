@@ -9,13 +9,13 @@ Video video;
 
 Video::Video(void)
 {
-    renderer	 = new RenderGLES();
+
 }
 
 Video::~Video(void)
 {
     printf ("Video destructor runs.\n");
-    //renderer->disable();
+    renderer->disable();
     delete renderer;
 }
 
@@ -26,6 +26,7 @@ void Video::disable()
 
 int Video::set_video_mode(void)
 {
+    renderer	 = new RenderGLES();
     renderer->init(320, 200, 1, 1, 0);
 
     return 1;
